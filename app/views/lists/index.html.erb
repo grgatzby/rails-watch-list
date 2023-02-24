@@ -1,13 +1,13 @@
-<div>
-  <div>
-    <h1>Save any kind of movie</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://img.freepik.com/photos-premium/interieur-salle-cinema-vide-sieges-jaunes_34755-1013.jpg');">
+  <div class="container">
+    <h1><strong>Save any kind of movie</strong></h1>
   </div>
-  <ul>
-    <% @lists.each do |list| %>
-      <div>
-        <li><%= link_to list.name, list_path(list) %></li>
-      </div>
-    <% end %>
-  </ul>
-  <%= link_to "Create a new list", new_list_path%>
 </div>
+<div class = "cards-list">
+  <% @lists.each do |list| %>
+    <div>
+      <%= link_to list.name, list_path(list) %></li>
+    </div>
+  <% end %>
+</div>
+<h4><strong><%= link_to "Create a new list", new_list_path%></strong></h4>

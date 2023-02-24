@@ -64,6 +64,7 @@ group :development do
   # gem "spring"
 end
 
+#  custom set-up
 gem 'rspec-rails', group: [ :test ]
 gem 'rails-controller-testing', group: [ :test ]
 gem "autoprefixer-rails"
