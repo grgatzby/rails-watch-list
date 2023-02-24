@@ -24,12 +24,12 @@ require 'json'
 
 Movie.destroy_all
 url = 'https://tmdb.lewagon.com/movie/top_rated'
-movies = JSON.parse (URI.open(url).read)
-movies["results"].each do |movie|
+movies = JSON.parse(URI.open(url).read)
+movies['results'].each do |movie|
   movie = Movie.create(
-      title: movie["original_title"],
-      overview: movie["overview"],
-      rating: movie["vote_average"],
-      poster_url: "https://image.tmdb.org/t/p/w500/#{movie["poster_path"]}"
+    title: movie['original_title'],
+    overview: movie['overview'],
+    rating: movie['vote_average'],
+    poster_url: "https://image.tmdb.org/t/p/w500/#{movie['poster_path']}"
   )
 end
