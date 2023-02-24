@@ -3,14 +3,19 @@
     <h1><strong>Save any kind of movie</strong></h1>
   </div>
 </div>
-<div class = "cards-list">
-  <% @lists.each do |list| %>
-    <div>
-      <%= link_to list.name, list_path(list) %></li>
-    </div>
-  <% end %>
-</div>
-<!-- app/views/articles/index.html.erb -->
-<%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
 
-<h4><strong><%= link_to "Create a new list", new_list_path%></strong></h4>
+<div class="cards-container">
+  <div class = "cards-list-banner">
+    <div>My lists</div>
+    <div class="btn btn-success btn-sm"><%= link_to "Create a new list", new_list_path%></div>
+  </div>
+  <div class = "cards-list">
+    <div>
+      <% @lists.each do |list| %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path list.photo.key, height: 300, crop: :fill %>')">
+          <%= link_to list.name, list_path(list) %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
