@@ -9,7 +9,6 @@ class BookmarksController < ApplicationController
   def create
     @list = List.find(params[:list_id])
     @bookmark = Bookmark.new(bookmark_params)
-    # @bookmark.movie_id = set_movie(:id)
     @bookmark.list = @list
     if @bookmark.save
       redirect_to list_path(@list)
@@ -21,7 +20,6 @@ class BookmarksController < ApplicationController
   def destroy
     @bookmark = Bookmark.find(params[:id])
     @bookmark.destroy
-    # No need for app/views/restaurants/destroy.html.erb
     redirect_to list_path(@bookmark.list), status: :see_other
   end
 

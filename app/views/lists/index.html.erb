@@ -1,3 +1,8 @@
+
+<div class="over-banner">
+    <div class="text-black">My lists</div>
+    <div><%= link_to "New list", new_list_path, class: 'link-black'%></div>
+</div>
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://img.freepik.com/photos-premium/interieur-salle-cinema-vide-sieges-jaunes_34755-1013.jpg');">
   <div class="container">
     <h1><strong>Save any kind of movie</strong></h1>
@@ -5,17 +10,15 @@
 </div>
 
 <div class="container">
-  <div class = "cardbox-banner">
+  <div class="cardbox-banner">
     <div>My lists</div>
-    <div class="btn btn-success btn-sm"><%= link_to "Create a new list", new_list_path, class: 'white-text-color'%></div>
+    <div class="btn btn-success btn-sm"><%= link_to "Create a new list", new_list_path, class: 'white-text-btn'%></div>
   </div>
   <div class = "lists-cardbox">
-    <div>
-      <% @lists.each do |list| %>
-        <div class="list-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path list.photo.key, height: 300, crop: :fill %>')">
-          <%= link_to list.name, list_path(list), class: 'white-text-color' %>
-        </div>
-      <% end %>
-    </div>
+    <% @lists.each do |list| %>
+      <div class="list-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path list.photo.key, height: 300, crop: :fill %>')">
+        <%= link_to list.name, list_path(list), class: 'white-text-btn' %>
+      </div>
+    <% end %>
   </div>
 </div>
