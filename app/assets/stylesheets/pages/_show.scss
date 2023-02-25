@@ -1,16 +1,18 @@
-// Specific CSS for your home-page
-.cards {
+// Import page-specific CSS files here.
+.bookmarks-cardbox {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
-  text-align: center;
+  margin-bottom: 12px;
   justify-content: center;
+}
 
-  h6 {
-    font-style: italic;
-  }
-
-  p {
-    font-size: xx-small;
-  }
+.orange-count {
+  background-color: orange;
+  width: 100px;
+  text-align: center;
+  border-radius: 2px;
+  position: absolute;
+  right: 16px;
+  top: 20px;
 }
