@@ -4,41 +4,52 @@
 }
 
 .bookmark-card {
-  width: 350px;
-  height: 100px;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 600px;
+  height: 400px;
   margin-bottom: 16px;
+  border-radius: 4px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 
   img {
     width: 100%;
-    height: 150px;
+    height: 200px;
     object-fit: cover;
     object-position: center;
+    border-radius: 4px 4px 0 0;
+  }
+  .bookmark-card-text {
+    flex-grow: 1;
   }
 
+  .bookmark-card-footer {
+    padding: 20px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: bolder;
+  }
+
+}
+
+.bookmark-card-text {
   h3 {
     font-weight: bold;
     font-size: 20px;
   }
 
   p {
+    flex-grow: 1;
     font-size: 12px;
     text-justify: left;
   }
-
-
 }
 
-.card-bookmark-footer {
-  display: flex;
-  justify-content: space-between;
-
-  h6 {
-    font-style: italic;
-  }
-
+.bookmark-card-footer {
   a {
     text-decoration: none;
     color: red;

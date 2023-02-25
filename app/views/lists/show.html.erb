@@ -14,17 +14,18 @@
       <% @list.bookmarks.each do |bookmark| %>
         <div class="bookmark-card">
           <%= image_tag bookmark.movie.poster_url, alt: bookmark.movie.title, height: 120%>
-          <div class ="p-3 shadow-sm bg-light">
+          <div class="bookmark-card-text p-3">
             <h3><%= bookmark.movie.title %></h3>
             <p><%= bookmark.movie.overview %></p>
-            <div class="card-bookmark-footer">
-              <h6>
+          </div>
+          <div class="bookmark-card-footer">
+            <div>
+              <p>
                 <i class="fa-solid fa-quote-left"></i>
                 <%= bookmark.comment %>
-                <i class="fa-solid fa-quote-right"></i>
-              </h6>
-              <p><%= link_to "Delete", bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%></p>
+              </p>
             </div>
+            <p><%= link_to "Delete", bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%></p>
           </div>
         </div>
       <% end %>
