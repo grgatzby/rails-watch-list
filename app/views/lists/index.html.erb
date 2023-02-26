@@ -22,5 +22,4 @@
     <% end %>
   </div>
 </div>
-<%= cl_image_tag("qrfhvy4aszb897eh0ajy",
-      width: 400, height: 300, crop: :fill) %>
+<%Cloudinary::Uploader.upload("boris_retreat_2017.jpg")  %>
