@@ -1,19 +1,14 @@
 .over-banner {
   display: flex;
   justify-content: flex-end;
-  height: 20px;
+  height: $over-banner-height;
   background-color: white;
   position: sticky;
   top: 0;
 
-  .text-black {
-    padding-top: 0px;
-    margin: 4px;
-    color: black;
-  }
-
   .link-black {
-    margin: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
     color: black;
     text-decoration: none;
   }

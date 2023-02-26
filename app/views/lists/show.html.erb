@@ -1,5 +1,6 @@
 <div class="over-banner">
-    <div class="text-black">My lists</p>
+    <%= link_to "Delete list", lists_path(@list), class: 'link-black'%>
+    <%= link_to "My list", lists_path, class: 'link-black'%>
     <%= link_to "New list", new_list_path, class: 'link-black'%>
 </div>
 

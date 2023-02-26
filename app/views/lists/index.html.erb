@@ -1,6 +1,6 @@
 
 <div class="over-banner">
-    <div class="text-black">My lists</div>
+    <%= link_to "My list", lists_path, class: 'link-black'%>
     <div><%= link_to "New list", new_list_path, class: 'link-black'%></div>
 </div>
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://img.freepik.com/photos-premium/interieur-salle-cinema-vide-sieges-jaunes_34755-1013.jpg');">
@@ -22,4 +22,3 @@
     <% end %>
   </div>
 </div>
-<%Cloudinary::Uploader.upload("/Users/guillaumecazals/code/grgatzby/rails-watch-list/boris_retreat_2017.jpg")  %>
