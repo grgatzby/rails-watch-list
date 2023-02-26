@@ -24,10 +24,26 @@ class ListsController < ApplicationController
     end
   end
 
+  # def edit
+  #   # instantiate the new movie list form
+  #   @list = List.find(params[:id])
+  # end
+
+  # def update
+  #   # update a movie list
+  #   @list = List.find(params[:id])
+  #   if @list.update(list_params)
+  #     redirect_to list_path(@list)
+  #   else
+  #     render :new, status: :unprocessable_entity
+  #   end
+  # end
+
   def destroy
     # delete a movie list
     @list = List.find(params[:id])
     @list.destroy
+    redirect_to lists_path
   end
 
   private
