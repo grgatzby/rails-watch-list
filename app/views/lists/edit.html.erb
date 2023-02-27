@@ -1,8 +1,11 @@
 <h1>Edit movie list</h1>
 
-<%= simple_form_for(@list) do |f|%>
-  <%= f.input :name %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit %>
-<% end %>
-<div class="container"><%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %></div>
+<div class="container">
+  <%= simple_form_for(@list) do |f|%>
+    <%= f.input :name %>
+    <%= f.input :photo, as: :file %>
+    <%= f.submit %>
+  <% end %>
+  <h4>Current photo</h4>
+  <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
+</div>
